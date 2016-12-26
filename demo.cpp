@@ -1,5 +1,5 @@
 
-#include "morse.h"
+#include "cmorse"
 #include <stdio.h>
 #include <cstring>
 
