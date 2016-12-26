@@ -1,6 +1,6 @@
 
 #include "cmorse"
-#include <stdio.h>
+#include <cstdio>
 #include <cstring>
 
 int main() {
