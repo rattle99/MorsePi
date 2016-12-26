@@ -2,8 +2,7 @@
 /* Morse code C header file for Raspberry Pi to use with LEDs.
 system() function used for setting GPIO_GEN pin and blinking led.
 One unit is 0.5 seconds, so a dot equals 0.5 seconds and a dash equals 1.5 seconds (3u).
-A pause is 1 second long and a space rapid 10 blinks.
-*/
+A pause is 1 second long and a space is rapid 10 blinks. */
 
 
 #include <stdio.h>
