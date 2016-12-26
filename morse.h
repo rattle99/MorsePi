@@ -13,9 +13,10 @@ A pause is 1 second long and a space is rapid 10 blinks. */
 
 int pin;
 
-int setgpiopin (int pinnum){
+int setgpiopin (int pinnum)
+{
     char setpin[50];
-	sprintf(setpin, "gpio mode %d out", pinnum);
+    sprintf(setpin, "gpio mode %d out", pinnum);
     system(setpin);
     pin = pinnum;
     return 0;
@@ -24,20 +25,23 @@ int setgpiopin (int pinnum){
 char ledon[40];
 char ledoff[40];
 
-int makecommands() {
-	sprintf(ledon, "gpio write %d 1", pin);
+int makecommands() 
+{
+    sprintf(ledon, "gpio write %d 1", pin);
     sprintf(ledoff, "gpio write %d 0", pin);
     return 0;
 }
 
-int blinkt(float time) {
+int blinkt(float time) 
+{
 	system(ledon);
 	sleep(time);
 	system(ledoff);
     return 0;
 }
 
-int blinkdot() {
+int blinkdot() 
+{
 	system(ledon);
 	sleep(0.5);
 	system(ledoff);
@@ -45,7 +49,8 @@ int blinkdot() {
 	return 0;
 }
 
-int blinkdash() {
+int blinkdash() 
+{
 	system(ledon);
 	sleep(1.5);
 	system(ledoff);
@@ -53,7 +58,8 @@ int blinkdash() {
 	return 0;
 }
 
-int blink1() {
+int blink1() 
+{
 	blinkdot();
 	blinkdash();
 	blinkdash();
@@ -62,9 +68,10 @@ int blink1() {
 	return 0;
 }
 
-int blink2() {
+int blink2() 
+{
 	blinkdot();
-    blinkdot();
+    	blinkdot();
 	blinkdash();
 	blinkdash();
 	blinkdash();
@@ -72,7 +79,8 @@ int blink2() {
 	return 0;
 }
 
-int blink3() {
+int blink3() 
+{
 	blinkdot();
 	blinkdot();
 	blinkdot();
@@ -82,7 +90,8 @@ int blink3() {
 	return 0;
 }
 
-int blink4() {
+int blink4() 
+{
 	blinkdot();
 	blinkdot();
 	blinkdot();
@@ -91,40 +100,41 @@ int blink4() {
 	return 0;
 }
 
-int blink5() {
-	int c = 0;
-	while (c != 5) {
+int blink5() 
+{
+	int c = 5;
+	while (c--) 
 		blinkdot();
-		c++;
-	}
+	
 	sleep(1.5);
 	return 0;
 }
 
-int blink6() {
+int blink6() 
+{
 	blinkdash();
-	int c = 0;
-	while (c != 4) {
+	int c = 4;
+	while (c--) 
 		blinkdot();
-		c++;
-	}
+
 	sleep(1.5);
 	return 0;
 }
 
-int blink7() {
+int blink7() 
+{
 	blinkdash();
 	blinkdash();
-	int c = 0;
-	while (c != 3) {
+	int c = 3;
+	while (c--) 
 		blinkdot();
-		c++;
-	}
+		
 	sleep(1.5);
 	return 0;
 }
 
-int blink8() {
+int blink8() 
+{
 	blinkdash();
 	blinkdash();
 	blinkdash();
@@ -134,57 +144,60 @@ int blink8() {
 	return 0;
 }
 
-int blink9() {
-	int c = 0;
-	while (c != 4) {
+int blink9() 
+{
+	int c = 4;
+	while (c--) 
 		blinkdash();
-		c++;
-	}
+		
 	blinkdot();
 	sleep(1.5);
 	return 0;
 }
 
-int blink0() {
-	int c = 0;
-	while (c != 5) {
+int blink0()
+{
+	int c = 5;
+	while (c--) 
 		blinkdash();
-		c++;
-	}
+	
 	sleep(1.5);
 	return 0;
 }
 
-int blinkperiod() {
+int blinkperiod() 
+{
 	blinkdot();
 	blinkdash();
 	blinkdot();
 	blinkdash();
-	blinkdot();
-	blinkdash();
-	sleep(1.5);
-	return 0;
-}
-
-int blinkA() {
 	blinkdot();
 	blinkdash();
 	sleep(1.5);
 	return 0;
 }
 
-int blinkB() {
+int blinkA() 
+{
+	blinkdot();
 	blinkdash();
-	int c = 0;
-	while(c != 3) {
+	sleep(1.5);
+	return 0;
+}
+
+int blinkB() 
+{
+	blinkdash();
+	int c = 3;
+	while(c--) 
 		blinkdot();
-		c++;
-	}
+		
 	sleep(1.5);
 	return 0;
 }
 
-int blinkC() {
+int blinkC() 
+{
 	blinkdash();
 	blinkdot();
 	blinkdash();
@@ -193,7 +206,8 @@ int blinkC() {
 	return 0;
 }
 
-int blinkD() {
+int blinkD() 
+{
 	blinkdash();
 	blinkdot();
 	blinkdot();
@@ -201,13 +215,15 @@ int blinkD() {
 	return 0;
 }
 
-int blinkE() {
+int blinkE() 
+{
 	blinkdot();
 	sleep(1.5);
 	return 0;
 }
 
-int blinkF() {
+int blinkF() 
+{
 	blinkdot();
 	blinkdot();
 	blinkdash();
@@ -216,7 +232,8 @@ int blinkF() {
 	return 0;
 }
 
-int blinkG() {
+int blinkG() 
+{
 	blinkdash();
 	blinkdash();
 	blinkdot();
@@ -224,35 +241,37 @@ int blinkG() {
 	return 0;
 }
 
-int blinkH() {
-	int c = 0;
-	while (c != 4) {
+int blinkH() 
+{
+	int c = 4;
+	while (c--) 
 		blinkdot();
-		c++;
-	}
+		
 	sleep(1.5);
 	return 0;
 }
 
-int blinkI() {
+int blinkI() 
+{
 	blinkdot();
 	blinkdot();
 	sleep(1.5);
 	return 0;
 }
 
-int blinkJ() {
+int blinkJ() 
+{
 	blinkdot();
-	int c = 0;
-	while (c != 3) {
+	int c = 3;
+	while (c--) {
 		blinkdash();
-		c++;
-	}
+	
 	sleep(1.5);
 	return 0;
 }
 
-int blinkK() {
+int blinkK() 
+{
 	blinkdash();
 	blinkdot();
 	blinkdash();
@@ -260,7 +279,8 @@ int blinkK() {
 	return 0;
 }
 
-int blinkL(){
+int blinkL()
+{
 	blinkdot();
 	blinkdash();
 	blinkdot();
@@ -269,34 +289,34 @@ int blinkL(){
 	return 0;
 }
 
-int blinkM() {
-	int c = 0;
-	while (c != 2) {
+int blinkM() 
+{
+	blinkdash();
+	blinkdash();
+	sleep(1.5);
+	return 0;
+}
+
+int blinkN() 
+{
+	blinkdash();
+	blinkdot();
+	sleep(1.5);
+	return 0;
+}
+
+int blinkO() 
+{
+	int c = 3;
+	while (c--) 
 		blinkdash();
-		c++;
-	}
+		
 	sleep(1.5);
 	return 0;
 }
 
-int blinkN() {
-	blinkdash();
-	blinkdot();
-	sleep(1.5);
-	return 0;
-}
-
-int blinkO() {
-	int c = 0;
-	while (c != 3) {
-		blinkdash();
-		c++;
-	}
-	sleep(1.5);
-	return 0;
-}
-
-int blinkP() {
+int blinkP() 
+{
 	blinkdot();
 	blinkdash();
 	blinkdash();
@@ -305,19 +325,18 @@ int blinkP() {
 	return 0;
 }
 
-int blinkQ() {
-	int c = 0;
-	while (c != 2) {
-		blinkdash();
-		c++;
-	}
+int blinkQ() 
+{
+	blinkdash();
+	blinkdash();
 	blinkdot();
 	blinkdash();
 	sleep(1.5);
 	return 0;
 }
 
-int blinkR() {
+int blinkR() 
+{
 	blinkdot();
 	blinkdash();
 	blinkdot();
@@ -325,45 +344,45 @@ int blinkR() {
 	return 0;
 }
 
-int blinkS() {
-	int c = 0;
-	while (c != 3) {
+int blinkS() 
+{
+	int c = 3;
+	while (c--) 
 		blinkdot();
-		c++;
-	}
+		
 	sleep(1.5);
 	return 0;
 }
 
-int blinkT() {
+int blinkT() 
+{
 	blinkdash();
 	sleep(1.5);
 	return 0;
 }
 
-int blinkU() {
-	int c = 0;
-	while (c != 2) {
+int blinkU() 
+{
+	blinkdot();
+	blinkdot();
+	blinkdash();
+	sleep(1.5);
+	return 0;
+}
+
+int blinkV() 
+{
+	int c = 3;
+	while (c--) 
 		blinkdot();
-		c++;
-	}
+	
 	blinkdash();
 	sleep(1.5);
 	return 0;
 }
 
-int blinkV() {
-	int c = 0;
-	while (c != 3) {
-		blinkdot();
-		c++;
-	}
-	blinkdash();
-	sleep(1.5);
-	return 0;
-}
-
-int blinkW() {
+int blinkW() 
+{
 	blinkdot();
 	blinkdash();
 	blinkdash();
@@ -371,7 +390,8 @@ int blinkW() {
 	return 0;
 }
 
-int blinkX() {
+int blinkX() 
+{
 	blinkdash();
 	blinkdot();
 	blinkdot();
@@ -380,7 +400,8 @@ int blinkX() {
 	return 0;
 }
 
-int blinkY() {
+int blinkY() 
+{
 	blinkdash();
 	blinkdot();
 	blinkdash();
@@ -389,19 +410,18 @@ int blinkY() {
 	return 0;
 }
 
-int blinkZ() {
-	int c = 0;
-	while (c != 2) {
-		blinkdash();
-		c++;
-	}
+int blinkZ() 
+{
+	blinkdash();
+	blinkdash();
 	blinkdot();
 	blinkdot();
 	sleep(1.5);
 	return 0;
 }
 
-int blinkspace() {
+int blinkspace() 
+{
         int m=10;
         while(m--)
         {
@@ -411,7 +431,8 @@ int blinkspace() {
         return 0;
 }
 
-int blinkstring(char * string) { 				// Blink a character array (string)
+int blinkstring(char * string) 
+{ 								// Blink a character array (string)
 	int length = strlen(string);				// in morse code.
 	int count = 0;	
 	while (count < length) 
