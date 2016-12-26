@@ -263,7 +263,7 @@ int blinkJ()
 {
 	blinkdot();
 	int c = 3;
-	while (c--) {
+	while (c--) 
 		blinkdash();
 	
 	sleep(1.5);
