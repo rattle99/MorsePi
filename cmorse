@@ -5,7 +5,7 @@ One unit is 0.5 seconds, so a dot equals 0.5 seconds and a dash equals 1.5 secon
 A pause is 1 second long and a space is rapid 10 blinks. */
 
 
-#include <stdio.h>
+#include <cstdio.h>
 #include <cstring>
 #include <unistd.h>
 #include <cstdlib>
