@@ -1,5 +1,5 @@
 
-#include "cmorse"
+#include "cmorse"	// Required header for morsecode
 #include <cstdio>
 #include <cstring>
 #include <iostream>
