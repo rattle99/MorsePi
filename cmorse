@@ -7,7 +7,6 @@ A pause is 1 second long and a space is rapid 10 blinks. */
 
 #include <cstdio>
 #include <cstring>
-#include <unistd.h>
 #include <cstdlib>
 
 
