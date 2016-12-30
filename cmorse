@@ -11,24 +11,17 @@ A pause is 1 second long and a space is rapid 10 blinks. */
 #include <unistd.h>
 
 
-int pin;
+
+char ledon[40];
+char ledoff[40];
 
 int setgpiopin (int pinnum)
 {
     char setpin[50];
     sprintf(setpin, "gpio mode %d out", pinnum);
     system(setpin);
-    pin = pinnum;
-    return 0;
-}
-
-char ledon[40];
-char ledoff[40];
-
-int makecommands() 
-{
-    sprintf(ledon, "gpio write %d 1", pin);
-    sprintf(ledoff, "gpio write %d 0", pin);
+    sprintf(ledon, "gpio write %d 1", pinnum);
+    sprintf(ledoff, "gpio write %d 0", pinnum);
     return 0;
 }
 
