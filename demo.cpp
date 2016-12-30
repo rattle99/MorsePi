@@ -6,7 +6,6 @@
 
 int main() {
 	setgpiopin(1); // Set the GPIO pin to GPIO_GEN1.
-	makecommands(); 
 	char str[50]; 
 	printf(" Enter message : ");
 	std::cin.getline(str,50);	//Input string
