@@ -17,12 +17,11 @@ char ledoff[40];
 
 void setgpiopin (int pinnum)
 {
-    char setpin[50];
-    sprintf(setpin, "gpio mode %d out", pinnum);
-    system(setpin);
-    sprintf(ledon, "gpio write %d 1", pinnum);
-    sprintf(ledoff, "gpio write %d 0", pinnum);
-   
+	char setpin[50];
+    	sprintf(setpin, "gpio mode %d out", pinnum);
+    	system(setpin);
+    	sprintf(ledon, "gpio write %d 1", pinnum);
+    	sprintf(ledoff, "gpio write %d 0", pinnum); 
 }
 
 void blinkt(float time) 
@@ -30,7 +29,6 @@ void blinkt(float time)
 	system(ledon);
 	sleep(time);
 	system(ledoff);
-
 }
 
 void blinkdot() 
@@ -39,7 +37,6 @@ void blinkdot()
 	sleep(0.5);
 	system(ledoff);
 	sleep(1);
-
 }
 
 void blinkdash() 
@@ -48,7 +45,6 @@ void blinkdash()
 	sleep(1.5);
 	system(ledoff);
 	sleep(1);
-	
 }
 
 void blink1() 
@@ -58,7 +54,6 @@ void blink1()
 	blinkdash();
 	blinkdash();        
 	sleep(1.5);
-	
 }
 
 void blink2() 
@@ -69,7 +64,6 @@ void blink2()
 	blinkdash();
 	blinkdash();
 	sleep(1.5);
-	
 }
 
 void blink3() 
@@ -80,7 +74,6 @@ void blink3()
 	blinkdash();
 	blinkdash();
 	sleep(1.5);
-	
 }
 
 void blink4() 
@@ -90,7 +83,6 @@ void blink4()
 	blinkdot();
 	blinkdot();
 	sleep(1.5);
-
 }
 
 void blink5() 
@@ -98,9 +90,7 @@ void blink5()
 	int c = 5;
 	while (c--) 
 		blinkdot();
-	
 	sleep(1.5);
-	
 }
 
 void blink6() 
@@ -109,9 +99,7 @@ void blink6()
 	int c = 4;
 	while (c--) 
 		blinkdot();
-
 	sleep(1.5);
-	
 }
 
 void blink7() 
@@ -120,10 +108,8 @@ void blink7()
 	blinkdash();
 	int c = 3;
 	while (c--) 
-		blinkdot();
-		
+		blinkdot();	
 	sleep(1.5);
-
 }
 
 void blink8() 
@@ -134,18 +120,15 @@ void blink8()
 	blinkdot();
 	blinkdot();
 	sleep(1.5);
-
 }
 
 void blink9() 
 {
 	int c = 4;
 	while (c--) 
-		blinkdash();
-		
+		blinkdash();	
 	blinkdot();
 	sleep(1.5);
-	
 }
 
 void blink0()
@@ -153,9 +136,7 @@ void blink0()
 	int c = 5;
 	while (c--) 
 		blinkdash();
-	
 	sleep(1.5);
-	
 }
 
 void blinkperiod() 
@@ -167,7 +148,6 @@ void blinkperiod()
 	blinkdot();
 	blinkdash();
 	sleep(1.5);
-	
 }
 
 void blinkA() 
@@ -175,17 +155,14 @@ void blinkA()
 	blinkdot();
 	blinkdash();
 	sleep(1.5);
-	
 }
 void blinkB() 
 {
 	blinkdash();
 	int c = 3;
 	while(c--) 
-		blinkdot();
-		
+		blinkdot();	
 	sleep(1.5);
-	
 }
 
 void blinkC() 
@@ -195,7 +172,6 @@ void blinkC()
 	blinkdash();
 	blinkdot();
 	sleep(1.5);
-	
 }
 
 void blinkD() 
@@ -204,14 +180,12 @@ void blinkD()
 	blinkdot();
 	blinkdot();
 	sleep(1.5);
-	
 }
 
 void blinkE() 
 {
 	blinkdot();
 	sleep(1.5);
-	
 }
 
 void blinkF() 
@@ -221,7 +195,6 @@ void blinkF()
 	blinkdash();
 	blinkdot();
 	sleep(1.5);
-	
 }
 
 void blinkG() 
@@ -230,17 +203,14 @@ void blinkG()
 	blinkdash();
 	blinkdot();
 	sleep(1.5);
-	
 }
 
 void blinkH() 
 {
 	int c = 4;
 	while (c--) 
-		blinkdot();
-		
+		blinkdot();	
 	sleep(1.5);
-	
 }
 
 void blinkI() 
@@ -248,7 +218,6 @@ void blinkI()
 	blinkdot();
 	blinkdot();
 	sleep(1.5);
-	
 }
 
 void blinkJ() 
@@ -257,9 +226,7 @@ void blinkJ()
 	int c = 3;
 	while (c--) 
 		blinkdash();
-	
 	sleep(1.5);
-	
 }
 
 void blinkK() 
@@ -268,7 +235,6 @@ void blinkK()
 	blinkdot();
 	blinkdash();
 	sleep(1.5);
-	
 }
 
 void blinkL()
@@ -278,7 +244,6 @@ void blinkL()
 	blinkdot();
 	blinkdot();
 	sleep(1.5);
-	
 }
 
 void blinkM() 
@@ -286,7 +251,6 @@ void blinkM()
 	blinkdash();
 	blinkdash();
 	sleep(1.5);
-	
 }
 
 void blinkN() 
@@ -294,17 +258,14 @@ void blinkN()
 	blinkdash();
 	blinkdot();
 	sleep(1.5);
-
 }
 
 void blinkO() 
 {
 	int c = 3;
 	while (c--) 
-		blinkdash();
-		
+		blinkdash();	
 	sleep(1.5);
-	
 }
 
 void blinkP() 
@@ -314,7 +275,6 @@ void blinkP()
 	blinkdash();
 	blinkdot();
 	sleep(1.5);
-	
 }
 
 void blinkQ() 
@@ -324,7 +284,6 @@ void blinkQ()
 	blinkdot();
 	blinkdash();
 	sleep(1.5);
-	
 }
 
 void blinkR() 
@@ -333,24 +292,20 @@ void blinkR()
 	blinkdash();
 	blinkdot();
 	sleep(1.5);
-
 }
 
 void blinkS() 
 {
 	int c = 3;
 	while (c--) 
-		blinkdot();
-		
+		blinkdot();	
 	sleep(1.5);
-	
 }
 
 void blinkT() 
 {
 	blinkdash();
 	sleep(1.5);
-	
 }
 voidvoid blinkU() 
 {
@@ -358,7 +313,6 @@ voidvoid blinkU()
 	blinkdot();
 	blinkdash();
 	sleep(1.5);
-	
 }
 
 voidvoid blinkV() 
@@ -366,10 +320,8 @@ voidvoid blinkV()
 	int c = 3;
 	while (c--) 
 		blinkdot();
-	
 	blinkdash();
 	sleep(1.5);
-	
 }
 
 voidvoid blinkW() 
@@ -378,7 +330,6 @@ voidvoid blinkW()
 	blinkdash();
 	blinkdash();
 	sleep(1.5);
-	
 }
 
 void blinkX() 
@@ -388,7 +339,6 @@ void blinkX()
 	blinkdot();
 	blinkdash();
 	sleep(1.5);
-	
 }
 
 void blinkY() 
@@ -398,7 +348,6 @@ void blinkY()
 	blinkdash();
 	blinkdash();
 	sleep(1.5);
-	
 }
 
 void blinkZ() 
@@ -408,18 +357,14 @@ void blinkZ()
 	blinkdot();
 	blinkdot();
 	sleep(1.5);
-	
 }
 
 void blinkspace() 
 {
         int m=10;
         while(m--)
-        {
                 blinkt(0.1);
-        }
 	sleep(1.5);
-       
 }
 
 void blinkstring(char * string) 
@@ -571,7 +516,6 @@ void blinkstring(char * string)
 		}
 		count++;
 	}
-	
 }
 
 
