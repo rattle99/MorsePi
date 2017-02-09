@@ -11,7 +11,6 @@ A pause is 1 second long and a space is rapid 10 blinks. */
 #include <unistd.h>
 
 
-
 char ledon[40];
 char ledoff[40];
 
